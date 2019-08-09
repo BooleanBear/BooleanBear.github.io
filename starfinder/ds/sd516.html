@@ -6,6 +6,7 @@ h1 {
     text-align: center;
     color: aquamarine;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
 }
 body {background-color: rgb(32, 31, 63);}
 button {
@@ -18,7 +19,7 @@ button {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 20px;
+  font-size: 30px;
   font-family:'Courier New', Courier, monospace;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
@@ -28,13 +29,15 @@ button:hover {
 }
 .details {
     text-align: center;
-    height: 0px;
+    height: auto;
+    max-height: 0px;
     width: 0%;
     position: relative;
     top: -30px;
     z-index: -1;
-    transition: height .2s, width .2s ease .2s, top .5s ease 1s, opacity .2s ease 1s;
+    transition: max-height .2s, width .2s ease .2s, top .5s ease 1s, opacity .2s ease 1s;
     overflow: hidden;
+    /*white-space: nowrap;*/
     border-radius: 15px;
     border-style: solid;
     border-width: 2px;
@@ -44,10 +47,10 @@ button:hover {
     opacity: 0;
 }
 .open {
-    height: 150px;
+    max-height: 300px;
     width: 50%;
     top: 0px;
-    transition: height .2s ease .7s, width .2s ease .5s, top .5s, opacity .2s;
+    transition: max-height .2s ease .7s, width .2s ease .5s, top .5s, opacity .2s;
     opacity: 1;
 }
 
@@ -61,7 +64,7 @@ button:hover {
 </div>
 <p></p>
 <div style="text-align: left" class="details" id="background">
-    <div style="padding: 10px">
+    <div style="padding: 10px; font-size:20px">
 IY-1446::45 => SD-516 "Stellar Degenerator" captured from Sivv civilization near the end of the War of Aggression.<br/>
 IY-1447::23 => Collapse of Sivv civilization, evaluation of war climate determines no need of SD-516. Stored in hyperstellar demiplane for future use.<br/>
 IY-1562::86 => SD-516 employed against Rykkal civilization.<br/>
@@ -77,7 +80,7 @@ IY-1563::45 => Destructive potential of SD-516 deemed too high for any use. Seal
     </div>
     <p></p>
     <div class="details" id="classification">
-            <div style="padding: 10px">
+            <div style="padding: 10px; font-size:20px">
 
 SD-516 "Stellar Degenerator" is a Class 5 heavy armament capable of siphoning stellar energy from the target, resulting in loss of energy
 and imminent heat death of target system. Activation requires unanimous approval of all active governing bodies holding jurisdiction over military operations.
@@ -93,9 +96,9 @@ WARNING: All research on SD-516 has been halted indefinitely following recommend
     </div>
     <p></p>
     <div class="details" id="storage">
-            <div style="padding: 10px">
+            <div style="padding: 10px; font-size:20px">
 
-SD-516 is to be stored only in specifically designated Hyperstellar Demiplane 516 "Gate of the Twelve Suns." Access requires Tier 1 authorization.<br/>
+SD-516 is to be stored only in specifically designated Hyperstellar Demiplane 516. Access requires Tier 1 authorization.<br/>
 <p></p>
 Hyperstellar Demiplane 516 is stabilized in the gravitational orbit of twelve main sequence stars. Control of the Gate is accessible through command stations located on designated planetoids orbiting the stars.
 <p></p>
